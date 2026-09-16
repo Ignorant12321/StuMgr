@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生管理系统</title>
+    <link rel="stylesheet" href="./css/student.css">
+</head>
+
+<body>
+
+    <header></header>
+    <main>
+
+        <div id="stuMgr_title">
+            <h1>学生管理系统</h1>
+        </div>
+
+        <div id="add_student_field" class="field">
+            <h2><span class="h2_span">+&nbsp;</span>新增学生</h2>
+            <div class="form_container">
+                <div class="form_item">
+                    <label for="">姓名：</label><input id="name_input" type="text" placeholder="请输入姓名：">
+                </div>
+                <div class="form_item">
+                    <label for="">学号：</label><input id="id_input" type="text" placeholder="请输入学号：">
+                </div>
+                <div class="form_item">
+                    <label for="">班级：</label><input id="class_input" type="text" placeholder="请输入班级：">
+                </div>
+                <div class="form_item_button" id="form_item_button">
+                    <button id="add_student_button">新增学生</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="student_list_field" class="field">
+            <div id="list_head">
+
+                <span id="student_list_title_container">
+                    <span id="student_list_title">学生列表</span>
+                    <span id="student_list_Subtitle">共5名学生</span>
+                </span>
+
+                <span id="student_list_query_container">
+                    <input type="text" id="student_list_query_input" placeholder="输入姓名、学号或班级查询">
+                    <button id="student_list_query_button">查询</button>
+                </span>
+
+            </div>
+            <div id="list_body">
+                <table>
+                    <thead id="stu_table_thead">
+                        <tr id="stu_table_thead_tr">
+                            <th>ID</th>
+                            <th>姓名</th>
+                            <th>学号</th>
+                            <th>班级</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stu_table_tbody">
+                        <tr id="tr_01">
+                            <td id="tr_01_index">01</td>
+                            <td id="tr_01_name">甲</td>
+                            <td id="tr_01_id">20260001</td>
+                            <td id="tr_01_class">软件一班</td>
+                            <td id="tr_01_buttons"><span id="td_01_editor" class="editor_span">编辑</span>&nbsp;
+                                <span class=" delete_span" id="td_01_delete" data-index=1>删除</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>乙</td>
+                            <td>20260001</td>
+                            <td>软件一班</td>
+                            <td><span class="editor_span"">编辑</span>&nbsp;<span class=" delete_span">删除</span></td>
+
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>丙</td>
+                            <td>20260001</td>
+                            <td>软件一班</td>
+                            <td><span class="editor_span"">编辑</span>&nbsp;<span class=" delete_span">删除</span></td>
+
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>丁</td>
+                            <td>20260001</td>
+                            <td>软件一班</td>
+                            <td><span class="editor_span"">编辑</span>&nbsp;<span class=" delete_span">删除</span></td>
+
+                        </tr>
+                    </tbody>
+                    <tfoot>
+
+                    </tfoot>
+                </table>
+                <div class=page_show_div>
+                    <span>第</span>
+                    <span>1</span>
+                    <span>页/共</span>
+                    <span>1</span>
+                    <span>页</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+
+    <div id="modify_dialog" class="field">
+        <h2>编辑学生信息</h2>
+        <div class="modidy_container">
+            <div class="modidy_container_item">
+                <label for="">姓名：</label><input id="name_modify" type="text" placeholder="请输入姓名：">
+            </div>
+            <div class="modidy_container_item">
+                <label for="">学号：</label><input id="id_modify" type="text" placeholder="请输入学号：">
+            </div>
+            <div class="modidy_container_item">
+                <label for="">班级：</label><input id="class_modify" type="text" placeholder="请输入班级：">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="modify_dialog_confirm">修改</button>
+            <button id="modify_dialog_delete">删除</button>
+            <button id="modify_dialog_cancel">取消</button>
+        </div>
+    </div>
+
+    <div id="delete_dialog" class="field">
+        <h2>删除学生</h2>
+        <div class="delete_info_container">
+            <p>是否确认要删除该名学生？</p>
+            <p style="color: red;">此操作提交后不可恢复</p>
+        </div>
+        <div class="buttons">
+            <button id="delete_dialog_confirm">确认</button>
+            <button id="delete_dialog_cancel">取消</button>
+        </div>
+    </div>
+
+    <div class="back"></div>
+
+
+</body>
+
+<script src="./js/student.js"></script>
+
+</html>
